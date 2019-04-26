@@ -10,7 +10,7 @@ int main()
     vector <string> nombre={"Juan Francisco","María","Jesús","Rafael"};
     vector <int> edad={42,21,23,35};
     vector <string> dni={"1111A","2222B","3333C","4444D"};
-    vector <int> salario={-1,1100,1600,700};
+    vector <float> salario={-1,1100,1600,700};
     vector <string> sede={"Madrid","-1","-1","-1"};
     vector <string> laboratorio={"-1","-1","Electrónica","-1"};
     vector <string> zona={"-1","Montaje","-1","-1"};
