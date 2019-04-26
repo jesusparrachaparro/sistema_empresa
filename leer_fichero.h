@@ -16,7 +16,7 @@ int main()
     vector <int> edad;
     vector <string> dni;
     vector <string> sede;
-    vector <int> salario;
+    vector <float> salario;
     vector <string> laboratorio;
     vector <string> zona;
     vector <string> universidad;
@@ -49,7 +49,7 @@ int main()
                     salario.push_back(-1);
                 }else{
                     sede.push_back("-1");
-                    int numero=atoi(token);
+                    float numero=atof(token);
                     salario.push_back(numero);
                 }
             }else if(cont==5){
