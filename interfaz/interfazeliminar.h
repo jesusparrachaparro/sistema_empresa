@@ -15,6 +15,9 @@ public:
     explicit InterfazEliminar(QWidget *parent = 0);
     ~InterfazEliminar();
 
+private slots:
+    void on_ok_clicked();
+
 private:
     Ui::InterfazEliminar *ui;
 };
