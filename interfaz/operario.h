@@ -12,8 +12,8 @@ private:
     string zona; // zona de la empresa en la que trabaja: almacén, mantenimiento, montaje, etc.
 public:
     Operario(string, int, string, float, string);
-    void mostrarOperario();
-    void trabajar();
+    vector<string> mostrarOperario();
+    string trabajar();
 };
 
 #endif // OPERARIO_H

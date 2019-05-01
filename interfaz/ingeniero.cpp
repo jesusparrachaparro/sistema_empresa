@@ -6,13 +6,15 @@ Ingeniero::Ingeniero(string nombre, int edad, string DNI, float salario, string 
 }
 
 // Métodos de Ingeniero
-void Ingeniero::mostrarIngeniero(){
-    mostrarPersona();
-    mostrarEmpleado();
-    cout<<"Laboratorio: "<<laboratorio<<endl;
+vector<string> Ingeniero::mostrarIngeniero(){
+    vector<string> vaux = mostrarPersona();
+    vaux = mostrarEmpleado();
+    vaux.push_back("Laboratorio: " + laboratorio);
+    return vaux;
 }
 
-void Ingeniero::trabajar(){
-    Persona::trabajar();
-    cout<<"Desarrollo e investigación."<<endl;
+string Ingeniero::trabajar(){
+    string trab = Persona::trabajar();
+    trab = "Funcion: Desarrollo e investigacion.";
+    return trab;
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "persona.h"
+#include <vector>
 
 using namespace std;
 
@@ -12,8 +13,8 @@ public:
     string sede; // ciudad de la empresa del directivo
 public:
     Directivo(string, int, string, string);
-    void mostrarDirectivo();
-    void trabajar();
+    vector<string> mostrarDirectivo();
+    string trabajar();
 
 };
 

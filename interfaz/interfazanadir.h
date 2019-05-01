@@ -2,7 +2,10 @@
 #define INTERFAZANADIR_H
 
 #include <QDialog>
-#include "anadir.h"
+#include "anadirdirectivo.h"
+#include "anadiroperario.h"
+#include "anadiringeniero.h"
+#include "anadirbecario.h"
 
 namespace Ui {
 class InterfazAnadir;

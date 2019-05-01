@@ -6,13 +6,15 @@ Operario::Operario(string nombre, int edad, string DNI, float salario, string zo
 }
 
 // Métodos de Operario
-void Operario::mostrarOperario(){
-    mostrarPersona();
-    mostrarEmpleado();
-    cout<<"Zona: "<<zona<<endl;
+vector<string> Operario::mostrarOperario(){
+    vector<string> vaux = mostrarPersona();
+    vaux = mostrarEmpleado();
+    vaux.push_back("Zona: " + zona);
+    return vaux;
 }
 
-void Operario::trabajar(){
-    Persona::trabajar();
-    cout<<"Mantenimiento, montaje y alamacenaje."<<endl;
+string Operario::trabajar(){
+    string trab = Persona::trabajar();
+    trab="Funcion: Mantenimiento, montaje y alamacenaje.";
+    return trab;
 }

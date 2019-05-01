@@ -2,6 +2,7 @@
 #define PERSONA_H
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -13,8 +14,8 @@ private:
     string DNI;
 public:
     Persona(string, int, string);
-    void mostrarPersona();
-    virtual void trabajar();
+    vector<string> mostrarPersona();
+    virtual string trabajar();
 };
 
 #endif // PERSONA_H

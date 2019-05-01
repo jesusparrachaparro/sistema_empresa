@@ -12,6 +12,6 @@ private:
     float salario;
 public:
     Empleado(string, int, string, float);
-    void mostrarEmpleado();
+    vector<string> mostrarEmpleado();
 };
 #endif // EMPLEADO_H

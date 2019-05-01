@@ -14,8 +14,8 @@ private:
     int meses; // meses de prácticas
 public:
     Becario(string, int, string, float, string, int, string, int);
-    void mostrarBecario();
-    void trabajar();
+    vector<string> mostrarBecario();
+    string trabajar();
 };
 
 #endif // BECARIO_H

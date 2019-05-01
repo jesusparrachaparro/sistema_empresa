@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>750</width>
-    <height>360</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -111,7 +111,31 @@
     <string>PERSONAL</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>-30</y>
+     <width>759</width>
+     <height>427</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes.qrc">:/imagenes/fondo.PNG</pixmap>
+   </property>
+  </widget>
+  <zorder>label_3</zorder>
+  <zorder>label</zorder>
+  <zorder>eliminar</zorder>
+  <zorder>consultar</zorder>
+  <zorder>anadir</zorder>
+  <zorder>label_2</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="imagenes.qrc"/>
+ </resources>
  <connections/>
 </ui>

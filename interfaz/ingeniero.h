@@ -12,8 +12,8 @@ private:
     string laboratorio; // laboratorio en el que trabaja: electrónica, mecánica, informática, eléctrica, etc.
 public:
     Ingeniero(string, int, string, float, string);
-    void mostrarIngeniero();
-    void trabajar();
+    vector<string> mostrarIngeniero();
+    string trabajar();
 };
 
 #endif // INGENIERO_H

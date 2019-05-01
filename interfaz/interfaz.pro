@@ -39,7 +39,15 @@ SOURCES += main.cpp\
     carcasa.cpp \
     ecu.cpp \
     pcb.cpp \
-    interfazordenes.cpp
+    interfazordenes.cpp \
+    anadirdirectivo.cpp \
+    anadiroperario.cpp \
+    anadiringeniero.cpp \
+    anadirbecario.cpp \
+    consultar.cpp \
+    eliminar.cpp \
+    escribir.cpp \
+    leer.cpp
 
 HEADERS  += mainwindow.h \
     interfazpersonal.h \
@@ -53,12 +61,18 @@ HEADERS  += mainwindow.h \
     ingeniero.h \
     operario.h \
     persona.h \
-    anadir.h \
     consultar.h \
     carcasa.h \
     ecu.h \
     pcb.h \
-    interfazordenes.h
+    interfazordenes.h \
+    anadirdirectivo.h \
+    anadiroperario.h \
+    anadiringeniero.h \
+    anadirbecario.h \
+    eliminar.h \
+    escribir.h \
+    leer.h
 
 FORMS    += mainwindow.ui \
     interfazpersonal.ui \
@@ -66,3 +80,6 @@ FORMS    += mainwindow.ui \
     interfazanadir.ui \
     interfazeliminar.ui \
     interfazordenes.ui
+
+RESOURCES += \
+    imagenes.qrc

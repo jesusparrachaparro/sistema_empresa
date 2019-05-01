@@ -8,10 +8,16 @@ Persona::Persona(string nombre, int edad, string DNI){
 }
 
 // Métodos de Persona
-void Persona::mostrarPersona(){
-    cout<<"Nombre: "<<nombre<<"\nDNI: "<<DNI<<"\nEdad: "<<edad<<endl;
+vector<string> Persona::mostrarPersona(){
+    string edadx = to_string(edad);
+    vector<string> vaux;
+    vaux.push_back("Nombre: " + nombre);
+    vaux.push_back("Edad: " + edadx);
+    vaux.push_back("DNI: " + DNI);
+    return vaux;
 }
 
-void Persona::trabajar(){
-    cout<<"Función: ";
+string Persona::trabajar(){
+    string trab;
+    return trab;
 }

@@ -6,6 +6,9 @@ Empleado::Empleado(string nombre, int edad, string DNI, float salario):Persona(n
 }
 
 // Métodos de Empleado
-void Empleado::mostrarEmpleado(){
-    cout<<"Salario: "<<salario<<endl;
+vector<string> Empleado::mostrarEmpleado(){
+    string salariox = to_string(salario);
+    vector<string> vaux;
+    vaux.push_back("Salario: " + salariox);
+    return vaux;
 }

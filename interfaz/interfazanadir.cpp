@@ -59,17 +59,20 @@ void InterfazAnadir::on_guardar_clicked()
     QString dni = ui->line3->text(); string dnix = dni.toStdString();
     if (tipo=="Directivo"){
         QString sede = ui->line4->text(); string sedex = sede.toStdString();
-        anadirDirectivo(tipox, nombrex, edadx, dnix, sedex);
+        anadirDirectivo nuevoDirectivo = anadirDirectivo();
+        nuevoDirectivo.nuevoDirectivo(tipox, nombrex, edadx, dnix, sedex);
     }
     else if (tipo=="Ingeniero"){
         QString salario = ui->line4->text(); float salariox = salario.toFloat();
         QString laboratorio = ui->line5->text(); string laboratoriox = laboratorio.toStdString();
-        anadirIngeniero(tipox, nombrex, edadx, dnix, salariox, laboratoriox);
+        anadirIngeniero nuevoIngeniero = anadirIngeniero();
+        nuevoIngeniero.nuevoIngeniero(tipox, nombrex, edadx, dnix, salariox, laboratoriox);
     }
     else if (tipo=="Operario"){
         QString salario = ui->line4->text(); float salariox = salario.toFloat();
         QString zona = ui->line5->text(); string zonax = zona.toStdString();
-        anadirOperario(tipox, nombrex, edadx, dnix, salariox, zonax);
+        anadirOperario nuevoOperario = anadirOperario();
+        nuevoOperario.nuevoOperario(tipox, nombrex, edadx, dnix, salariox, zonax);
     }
     else if (tipo=="Becario"){
         QString salario = ui->line4->text(); float salariox = salario.toFloat();
@@ -77,6 +80,7 @@ void InterfazAnadir::on_guardar_clicked()
         QString carrera = ui->line6->text(); string carrerax = carrera.toStdString();
         QString curso = ui->line7->text(); int cursox = curso.toInt();
         QString meses = ui->line8->text(); int mesesx = meses.toInt();
-        anadirBecario(tipox, nombrex, edadx, dnix, salariox, universidadx, cursox, carrerax, mesesx);
+        anadirBecario nuevoBecario = anadirBecario();
+        nuevoBecario.nuevoBecario(tipox, nombrex, edadx, dnix, salariox, universidadx, cursox, carrerax, mesesx);
     }
 }

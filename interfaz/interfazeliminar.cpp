@@ -18,6 +18,8 @@ InterfazEliminar::~InterfazEliminar()
 
 void InterfazEliminar::on_ok_clicked()
 {
+    ui->eliminado->setVisible(false);
+    ui->noencontrado->setVisible(false);
     QString filtro = ui->filtro->text(); string filtrox = filtro.toStdString();
     eliminar elimino=eliminar();
     int cont = elimino.eliminar_datos(filtrox);
@@ -28,4 +30,3 @@ void InterfazEliminar::on_ok_clicked()
     }
 
 }
-

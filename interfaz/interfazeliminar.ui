@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>750</width>
-    <height>360</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>10</y>
      <width>131</width>
      <height>21</height>
@@ -36,7 +36,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>40</x>
      <y>70</y>
      <width>101</width>
      <height>16</height>
@@ -51,10 +51,10 @@
     <string>Introduce el DNI</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="filtro">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>150</x>
      <y>70</y>
      <width>141</width>
      <height>21</height>
@@ -66,11 +66,11 @@
     </font>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="eliminado">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>180</y>
+     <x>310</x>
+     <y>190</y>
      <width>161</width>
      <height>16</height>
     </rect>
@@ -86,7 +86,71 @@
     <string>Usuario eliminado</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>-190</y>
+     <width>1024</width>
+     <height>768</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1024</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes.qrc">:/imagenes/fondo.PNG</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="noencontrado">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>190</y>
+     <width>221</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>No existen los datos</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ok">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>70</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <zorder>label_4</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>filtro</zorder>
+  <zorder>eliminado</zorder>
+  <zorder>noencontrado</zorder>
+  <zorder>ok</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="imagenes.qrc"/>
+ </resources>
  <connections/>
 </ui>

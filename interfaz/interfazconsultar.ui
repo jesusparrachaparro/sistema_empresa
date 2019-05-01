@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>750</width>
-    <height>360</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="buscar">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>340</x>
      <y>60</y>
      <width>75</width>
      <height>23</height>
@@ -34,7 +34,7 @@
   <widget class="QLineEdit" name="ndni">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>150</x>
      <y>60</y>
      <width>161</width>
      <height>20</height>
@@ -46,20 +46,10 @@
     </font>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="datos">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>100</y>
-     <width>541</width>
-     <height>231</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>40</x>
      <y>60</y>
      <width>101</width>
      <height>16</height>
@@ -94,7 +84,52 @@
     <string>Consulta de datos</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>-190</y>
+     <width>1024</width>
+     <height>768</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1024</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="imagenes.qrc">:/imagenes/fondo.PNG</pixmap>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="datos">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>511</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <zorder>label_4</zorder>
+  <zorder>buscar</zorder>
+  <zorder>ndni</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label</zorder>
+  <zorder>datos</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="imagenes.qrc"/>
+ </resources>
  <connections/>
 </ui>

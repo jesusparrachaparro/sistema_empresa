@@ -14,7 +14,7 @@ private:
     string carrera;
 public:
     Estudiante(string, int, string, string, int, string);
-    void mostrarEstudiante();
+    vector<string> mostrarEstudiante();
 };
 
 

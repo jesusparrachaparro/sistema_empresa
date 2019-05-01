@@ -21,6 +21,11 @@ void InterfazConsultar::on_buscar_clicked()
 {
     QString dni = ui->ndni->text();
     string dnix = dni.toStdString();
-    consultardatos(dnix);
-
+    consultar consultarDatos = consultar();
+    vector<string> vaux = consultarDatos.consultarDatos(dnix);
+    ui->datos->setVisible(true);
+    for (int i=0; i<vaux.size(); i++){
+        QString elemento = QString::fromStdString(vaux[i]);
+        ui->datos->addItem(elemento.toLatin1());
+    }
 }

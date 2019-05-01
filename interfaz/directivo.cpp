@@ -6,12 +6,14 @@ Directivo::Directivo(string nombre, int edad, string DNI, string sede):Persona(n
 }
 
 // Métodos clase Directivo
-void Directivo::mostrarDirectivo(){
-    mostrarPersona();
-    cout<<"Sede: "<<sede<<endl;
+vector<string> Directivo::mostrarDirectivo(){
+    vector<string> vaux = mostrarPersona();
+    vaux.push_back("Sede: " + sede);
+    return vaux;
 }
 
-void Directivo::trabajar(){
-    Persona::trabajar();
-    cout<<"Organización y relaciones internacionales."<<endl;
+string Directivo::trabajar(){
+    string trab = Persona::trabajar();
+    trab="Funcion: Organizacion y relaciones internacionales.";
+    return trab;
 }
