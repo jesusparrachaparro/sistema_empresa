@@ -2,6 +2,7 @@
 #define OPERARIO_H
 
 #include <iostream>
+#include <fstream>
 #include "empleado.h"
 
 using namespace std;
@@ -14,6 +15,7 @@ public:
     Operario(string, int, string, float, string);
     vector<string> mostrarOperario();
     string trabajar();
+    int mostrarNombre();
 };
 
 #endif // OPERARIO_H
