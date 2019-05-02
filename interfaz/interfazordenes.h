@@ -2,6 +2,7 @@
 #define INTERFAZORDENES_H
 
 #include <QDialog>
+#include "ordenes.h"
 
 namespace Ui {
 class InterfazOrdenes;
@@ -16,6 +17,8 @@ public:
     ~InterfazOrdenes();
 
 private slots:
+
+
     void on_crear_clicked();
 
 private:
