@@ -12,5 +12,8 @@ Carcasa::Carcasa(string material, float largo, float ancho, float grosor){
 
 // Métodos de Carcasa
 void Carcasa::mostrarCarcasa(){
-    cout<<"Material: "<<material<<"\nLargo: "<<largo<<"\nAncho: "<<ancho<<"\nGrosor: "<<grosor<<endl;
+    fstream fichero;
+    fichero.open("C:\\Users\\USUARIO\\Desktop\\orden.txt",ios::out | ios::app);
+    fichero<<"-Datos de la Carcasa: \n\tMaterial: "<<material<<"\n\tLargo: "<<largo<<"\n\tAncho: "<<ancho<<"\n\tGrosor: "<<grosor<<endl<<endl;
+    fichero.close();
 }
