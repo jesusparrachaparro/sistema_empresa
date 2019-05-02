@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <interfazpersonal.h>
+#include <interfazordenes.h>
 
 namespace Ui {
 class MainWindow;
@@ -27,3 +28,4 @@ private:
 };
 
 #endif // MAINWINDOW_H
+
