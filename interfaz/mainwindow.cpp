@@ -24,5 +24,8 @@ void MainWindow::on_personal_clicked()
 
 void MainWindow::on_inventario_clicked()
 {
-
+    InterfazOrdenes *ventana2 = new InterfazOrdenes();
+    ventana2->setModal(true);
+    ventana2->show();
 }
+
