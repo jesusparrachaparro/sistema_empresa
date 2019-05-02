@@ -2,6 +2,8 @@
 #define PCB_H
 
 #include <iostream>
+#include <fstream>
+
 using namespace std;
 
 class Pcb{
