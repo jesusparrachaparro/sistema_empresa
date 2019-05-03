@@ -12,7 +12,7 @@ class anadirDirectivo
 {
 public:
     anadirDirectivo();
-    void nuevoDirectivo(string, string, int, string, string);
+    int nuevoDirectivo(string, string, int, string, string);
 };
 
 #endif // ANADIRDIRECTIVO_H

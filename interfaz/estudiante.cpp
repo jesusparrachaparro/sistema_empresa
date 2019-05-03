@@ -10,7 +10,7 @@ Estudiante::Estudiante(string nombre, int edad, string DNI, string universidad, 
 // Métodos de Estudiante
 vector<string> Estudiante::mostrarEstudiante(){
     string cursox = to_string(curso);
-    vector<string> vaux = mostrarPersona();
+    vector<string> vaux;
     vaux.push_back("Universidad: " + universidad);
     vaux.push_back("Carrera: " + carrera);
     vaux.push_back("Curso: " + cursox);

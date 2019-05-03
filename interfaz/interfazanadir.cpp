@@ -17,6 +17,7 @@ InterfazAnadir::InterfazAnadir(QWidget *parent) :
     ui->carreralabel->setVisible(false); ui->line6->setVisible(false);
     ui->cursolabel->setVisible(false); ui->line7->setVisible(false);
     ui->meseslabel->setVisible(false); ui->line8->setVisible(false);
+    ui->anadido->setVisible(false); ui->yaexiste->setVisible(false);
 }
 
 InterfazAnadir::~InterfazAnadir()
@@ -27,9 +28,18 @@ InterfazAnadir::~InterfazAnadir()
 
 void InterfazAnadir::on_ok_clicked()
 {
-    ui->nombrelabel->setVisible(true); ui->line1->setVisible(true);
-    ui->edadlabel->setVisible(true); ui->line2->setVisible(true);
-    ui->dnilabel->setVisible(true); ui->line3->setVisible(true);
+    ui->nombrelabel->setVisible(true); ui->line1->setVisible(true); ui->line1->clear();
+    ui->edadlabel->setVisible(true); ui->line2->setVisible(true); ui->line2->clear();
+    ui->dnilabel->setVisible(true); ui->line3->setVisible(true); ui->line3->clear();
+    ui->sedelabel->setVisible(false); ui->line4->setVisible(false); ui->line4->clear();
+    ui->salariolabel->setVisible(false);
+    ui->laboratoriolabel->setVisible(false); ui->line5->setVisible(false); ui->line5->clear();
+    ui->zonalabel->setVisible(false);
+    ui->universidadlabel->setVisible(false);
+    ui->carreralabel->setVisible(false); ui->line6->setVisible(false); ui->line6->clear();
+    ui->cursolabel->setVisible(false); ui->line7->setVisible(false); ui->line7->clear();
+    ui->meseslabel->setVisible(false); ui->line8->setVisible(false); ui->line8->clear();
+    ui->anadido->setVisible(false); ui->yaexiste->setVisible(false);
     QString tipo = ui->tipo->text();
     if (tipo=="Directivo"){
         ui->sedelabel->setVisible(true); ui->line4->setVisible(true);
@@ -57,22 +67,23 @@ void InterfazAnadir::on_guardar_clicked()
     QString nombre = ui->line1->text(); string nombrex = nombre.toStdString();
     QString edad = ui->line2->text(); int edadx = edad.toInt();
     QString dni = ui->line3->text(); string dnix = dni.toStdString();
+    int cont;
     if (tipo=="Directivo"){
         QString sede = ui->line4->text(); string sedex = sede.toStdString();
         anadirDirectivo nuevoDirectivo = anadirDirectivo();
-        nuevoDirectivo.nuevoDirectivo(tipox, nombrex, edadx, dnix, sedex);
+        cont = nuevoDirectivo.nuevoDirectivo(tipox, nombrex, edadx, dnix, sedex);
     }
     else if (tipo=="Ingeniero"){
         QString salario = ui->line4->text(); float salariox = salario.toFloat();
         QString laboratorio = ui->line5->text(); string laboratoriox = laboratorio.toStdString();
         anadirIngeniero nuevoIngeniero = anadirIngeniero();
-        nuevoIngeniero.nuevoIngeniero(tipox, nombrex, edadx, dnix, salariox, laboratoriox);
+        cont = nuevoIngeniero.nuevoIngeniero(tipox, nombrex, edadx, dnix, salariox, laboratoriox);
     }
     else if (tipo=="Operario"){
         QString salario = ui->line4->text(); float salariox = salario.toFloat();
         QString zona = ui->line5->text(); string zonax = zona.toStdString();
         anadirOperario nuevoOperario = anadirOperario();
-        nuevoOperario.nuevoOperario(tipox, nombrex, edadx, dnix, salariox, zonax);
+        cont = nuevoOperario.nuevoOperario(tipox, nombrex, edadx, dnix, salariox, zonax);
     }
     else if (tipo=="Becario"){
         QString salario = ui->line4->text(); float salariox = salario.toFloat();
@@ -81,6 +92,8 @@ void InterfazAnadir::on_guardar_clicked()
         QString curso = ui->line7->text(); int cursox = curso.toInt();
         QString meses = ui->line8->text(); int mesesx = meses.toInt();
         anadirBecario nuevoBecario = anadirBecario();
-        nuevoBecario.nuevoBecario(tipox, nombrex, edadx, dnix, salariox, universidadx, cursox, carrerax, mesesx);
+        cont = nuevoBecario.nuevoBecario(tipox, nombrex, edadx, dnix, salariox, universidadx, cursox, carrerax, mesesx);
     }
+    if (cont==0) ui->anadido->setVisible(true);
+    else ui->yaexiste->setVisible(true);
 }

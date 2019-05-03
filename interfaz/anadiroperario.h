@@ -12,7 +12,7 @@ class anadirOperario
 {
 public:
     anadirOperario();
-    void nuevoOperario(string, string, int, string, float, string);
+    int nuevoOperario(string, string, int, string, float, string);
 };
 
 #endif // ANADIROPERARIO_H

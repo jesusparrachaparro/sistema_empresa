@@ -14,6 +14,6 @@ vector<string> Directivo::mostrarDirectivo(){
 
 string Directivo::trabajar(){
     string trab = Persona::trabajar();
-    trab="Funcion: Organizacion y relaciones internacionales.";
+    trab="Puesto: Directivo\nFuncion: Organizacion y relaciones internacionales";
     return trab;
 }

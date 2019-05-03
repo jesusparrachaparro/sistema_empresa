@@ -9,7 +9,8 @@ int escribir::escribir_ficheros(vector <string> profesion, vector <string> nombr
 {
 
     fstream fs;
-    fs.open("C:\\Users\\WIN10PRO\\Desktop\\fichero.txt",ios::trunc | ios::out);
+    string direccion="C:\\Users\\WIN10PRO\\Desktop\\fichero.txt";
+    fs.open(direccion,ios::trunc | ios::out);
 
     for(int i=0;i<profesion.size();i++){
         int cont=0;

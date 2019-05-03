@@ -19,10 +19,15 @@ InterfazConsultar::~InterfazConsultar()
 
 void InterfazConsultar::on_buscar_clicked()
 {
+    ui->datos->clear();
     QString dni = ui->ndni->text();
     string dnix = dni.toStdString();
     consultar consultarDatos = consultar();
-    vector<string> vaux = consultarDatos.consultarDatos(dnix);
+    vector<string> vaux;
+    vaux = consultarDatos.consultarDatos(dnix);
+    if (vaux.size()==0){
+        vaux.push_back("No existen los datos");
+    }
     ui->datos->setVisible(true);
     for (int i=0; i<vaux.size(); i++){
         QString elemento = QString::fromStdString(vaux[i]);

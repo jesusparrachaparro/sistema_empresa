@@ -9,7 +9,8 @@ int leer::leer_ficheros(vector <string> *profesion, vector <string> *nombre, vec
 {
 
     fstream fe;
-    fe.open("C:\\Users\\WIN10PRO\\Desktop\\fichero.txt",ios::in);
+    string direccion="C:\\Users\\WIN10PRO\\Desktop\\fichero.txt";
+    fe.open(direccion,ios::in);
 
     while(!fe.eof()){
         string cadena1;

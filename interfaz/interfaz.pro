@@ -47,7 +47,8 @@ SOURCES += main.cpp\
     consultar.cpp \
     eliminar.cpp \
     escribir.cpp \
-    leer.cpp
+    leer.cpp \
+    ordenes.cpp
 
 HEADERS  += mainwindow.h \
     interfazpersonal.h \
@@ -72,7 +73,8 @@ HEADERS  += mainwindow.h \
     anadirbecario.h \
     eliminar.h \
     escribir.h \
-    leer.h
+    leer.h \
+    ordenes.h
 
 FORMS    += mainwindow.ui \
     interfazpersonal.ui \

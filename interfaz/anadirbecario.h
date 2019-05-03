@@ -12,7 +12,7 @@ class anadirBecario
 {
 public:
     anadirBecario();
-    void nuevoBecario(string, string, int, string, float, string, int, string, int);
+    int nuevoBecario(string, string, int, string, float, string, int, string, int);
 };
 
 #endif // ANADIRBECARIO_H

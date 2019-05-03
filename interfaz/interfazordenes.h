@@ -17,8 +17,6 @@ public:
     ~InterfazOrdenes();
 
 private slots:
-
-
     void on_crear_clicked();
 
 private:

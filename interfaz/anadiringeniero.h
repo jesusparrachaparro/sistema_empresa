@@ -12,7 +12,7 @@ class anadirIngeniero
 {
 public:
     anadirIngeniero();
-    void nuevoIngeniero(string, string, int, string, float, string);
+    int nuevoIngeniero(string, string, int, string, float, string);
 };
 
 #endif // ANADIRINGENIERO_H

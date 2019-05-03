@@ -413,8 +413,8 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>-190</y>
+     <x>-10</x>
+     <y>-200</y>
      <width>1024</width>
      <height>768</height>
     </rect>
@@ -430,6 +430,46 @@
    </property>
    <property name="pixmap">
     <pixmap resource="imagenes.qrc">:/imagenes/fondo.PNG</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="anadido">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>200</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Usuario añadido</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="yaexiste">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>230</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>El usuario ya existe</string>
    </property>
   </widget>
   <zorder>label_4</zorder>
@@ -457,6 +497,8 @@
   <zorder>zonalabel</zorder>
   <zorder>laboratoriolabel</zorder>
   <zorder>guardar</zorder>
+  <zorder>anadido</zorder>
+  <zorder>yaexiste</zorder>
  </widget>
  <resources>
   <include location="imagenes.qrc"/>

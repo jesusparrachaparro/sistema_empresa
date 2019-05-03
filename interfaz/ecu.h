@@ -20,7 +20,7 @@ private:
     Carcasa carcasa;
 public:
     Ecu(string, string, Pcb, Carcasa);
-    void mostrarMateriales(string);
+    int mostrarMateriales(string);
 };
 
 #endif // ECU_H

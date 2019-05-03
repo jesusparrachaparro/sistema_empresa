@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include "empleado.h"
+#include "ecu.h"
+//#include "mainwindow.h"
 
 using namespace std;
 

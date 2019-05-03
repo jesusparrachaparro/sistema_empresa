@@ -7,15 +7,14 @@ Operario::Operario(string nombre, int edad, string DNI, float salario, string zo
 
 // Métodos de Operario
 vector<string> Operario::mostrarOperario(){
-    vector<string> vaux = mostrarPersona();
-    vaux = mostrarEmpleado();
+    vector<string> vaux = mostrarEmpleado();
     vaux.push_back("Zona: " + zona);
     return vaux;
 }
 
 string Operario::trabajar(){
     string trab = Persona::trabajar();
-    trab="Funcion: Mantenimiento, montaje y alamacenaje.";
+    trab="Puesto: Operario\nFuncion: Mantenimiento, montaje y alamacenaje";
     return trab;
 }
 
@@ -24,8 +23,8 @@ int Operario::mostrarNombre(){
     string nombre = vaux[0];
     string DNI = vaux[2];
     fstream fichero;
-    fichero.open("C:\\Users\\USUARIO\\Desktop\\orden.txt",ios::out | ios::app);
+    string direccion = "C:\\Users\\WIN10PRO\\Desktop\\orden.txt";
+    fichero.open(direccion,ios::out | ios::app);
     fichero<<"-Operario al cargo: \n\tNombre: "<<nombre<<"\n\tDNI: "<<DNI<<endl;
     fichero.close();
-
 }

@@ -535,6 +535,46 @@
     <string>Crear</string>
    </property>
   </widget>
+  <widget class="QLabel" name="creada">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>120</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Órden creada</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="noencontrado">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>280</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Operario no encontrado</string>
+   </property>
+  </widget>
   <zorder>label_17</zorder>
   <zorder>label</zorder>
   <zorder>marca</zorder>
@@ -568,6 +608,8 @@
   <zorder>operario_2</zorder>
   <zorder>label_20</zorder>
   <zorder>crear_2</zorder>
+  <zorder>creada</zorder>
+  <zorder>noencontrado</zorder>
  </widget>
  <resources>
   <include location="imagenes.qrc"/>

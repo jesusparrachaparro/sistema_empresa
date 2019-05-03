@@ -8,14 +8,16 @@ Becario::Becario(string nombre, int edad, string DNI, float salario, string univ
 // Métodos Becario
 vector<string> Becario::mostrarBecario(){
     string mesesx = to_string(meses);
-    vector<string> vaux = mostrarEmpleado();
-    vaux = mostrarEstudiante();
+    vector<string> vaux1 = mostrarEmpleado();
+    vector<string> vaux2 = mostrarEstudiante();
+    vector<string> vaux(begin(vaux1),std::end(vaux1));
+    vaux.insert(vaux.end(),begin(vaux2),end(vaux2));
     vaux.push_back("Meses: " + mesesx);
     return vaux;
 }
 
 string Becario::trabajar(){
-    string trab = "abc";//Persona::trabajar();
-    trab="Funcion: Aprendizaje y práctica.";
+    string trab;
+    trab="Puesto: Becario en practicas\nFuncion: Aprendizaje y practica";
     return trab;
 }

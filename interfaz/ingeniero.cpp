@@ -7,14 +7,13 @@ Ingeniero::Ingeniero(string nombre, int edad, string DNI, float salario, string 
 
 // Métodos de Ingeniero
 vector<string> Ingeniero::mostrarIngeniero(){
-    vector<string> vaux = mostrarPersona();
-    vaux = mostrarEmpleado();
+    vector<string> vaux = mostrarEmpleado();
     vaux.push_back("Laboratorio: " + laboratorio);
     return vaux;
 }
 
 string Ingeniero::trabajar(){
     string trab = Persona::trabajar();
-    trab = "Funcion: Desarrollo e investigacion.";
+    trab = "Puesto: Ingeniero\nFuncion: Desarrollo e investigacion";
     return trab;
 }
