@@ -8,19 +8,20 @@ leer::leer()
 int leer::leer_ficheros(vector <string> *profesion, vector <string> *nombre, vector <int> *edad, vector <string> *dni, vector <string> *sede, vector <float> *salario, vector <string> *laboratorio, vector <string> *zona, vector <string> *universidad, vector <int> *curso, vector <string> *carrera, vector <int> *meses)
 {
 
-    fstream fe;
-    string direccion="C:\\Users\\WIN10PRO\\Desktop\\fichero.txt";
-    fe.open(direccion,ios::in);
+    fstream fe; // Se crea la variable fichero
+    string direccion="C:\\Users\\WIN10PRO\\Desktop\\fichero.txt"; // Se guarda la ruta donde se encuentra el fichero
+    fe.open(direccion,ios::in); // Se abre el fichero para lectura
 
-    while(!fe.eof()){
+    while(!fe.eof()){ // Hasta que no termine de leerse el fichero no se podrá salir del bucle
         string cadena1;
-        getline(fe,cadena1);
+        getline(fe,cadena1); // Se obtienen las filas una a una en cada iteración del bucle
         char cadena[100];
         strcpy(cadena,cadena1.c_str());
-        char *token = strtok(cadena, ":");
+        char *token = strtok(cadena, ":"); // strtok se utiliza para obtener los caracteres que se encuentren entre dos puntos
         string trabajo(token);
         profesion->push_back(trabajo);
         int cont= 0;
+        // Se van guardando los datos en sus respectivos contenedores de tipo vector
         while (token)
         {
             string palabra(token);
@@ -87,7 +88,7 @@ int leer::leer_ficheros(vector <string> *profesion, vector <string> *nombre, vec
         }
     }
 
-    fe.close();
+    fe.close(); // Se cierra el fichero
 
     return 0;
 }

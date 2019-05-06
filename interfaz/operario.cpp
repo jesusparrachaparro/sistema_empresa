@@ -18,13 +18,14 @@ string Operario::trabajar(){
     return trab;
 }
 
-int Operario::mostrarNombre(){
+int Operario::mostrarNombre(){ // Método para escribir los datos del operario en el fichero de órdenes
     vector <string> vaux = mostrarPersona();
     string nombre = vaux[0];
     string DNI = vaux[2];
     fstream fichero;
     string direccion = "C:\\Users\\WIN10PRO\\Desktop\\orden.txt";
     fichero.open(direccion,ios::out | ios::app);
-    fichero<<"-Operario al cargo: \n\tNombre: "<<nombre<<"\n\tDNI: "<<DNI<<endl;
+    fichero<<"-Operario al cargo: \n\t"<<nombre<<"\n\t"<<DNI<<endl;
     fichero.close();
+    return 0;
 }

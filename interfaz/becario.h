@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// Clase hija Becario en prácticas (herencia múltiple)
+// Clase hija Becario en prácticas --> HERENCIA MÚLTIPLE
 class Becario : public Empleado, public Estudiante{
 private:
     int meses; // meses de prácticas

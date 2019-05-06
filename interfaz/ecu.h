@@ -16,8 +16,8 @@ class Ecu{
 private:
     string marca;
     string modelo;
-    Pcb pcb;
-    Carcasa carcasa;
+    Pcb pcb; // --> AGREGACIÓN
+    Carcasa carcasa; // --> AGREGACIÓN
 public:
     Ecu(string, string, Pcb, Carcasa);
     int mostrarMateriales(string);

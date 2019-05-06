@@ -5,13 +5,15 @@ escribir::escribir()
 
 }
 
+// Se reciben los datos leídos del fichero como argumento de entrada para escribirlos
 int escribir::escribir_ficheros(vector <string> profesion, vector <string> nombre, vector <int> edad, vector <string> dni, vector <string> sede, vector <float> salario, vector <string> laboratorio, vector <string> zona, vector <string> universidad, vector <int> curso, vector <string> carrera, vector <int> meses)
 {
+    fstream fs; // Se crea una variable fichero
+    string direccion="C:\\Users\\WIN10PRO\\Desktop\\fichero.txt"; // Se guarda la ruta donde se encuentra el fichero
+    fs.open(direccion,ios::trunc | ios::out); // Se elimina el contenido del fichero y se abre para escribir en él
 
-    fstream fs;
-    string direccion="C:\\Users\\WIN10PRO\\Desktop\\fichero.txt";
-    fs.open(direccion,ios::trunc | ios::out);
-
+    // Se van añadiendo los datos uno a uno separados por dos puntos para poder identificarlos a la hora de ejecutar la
+    // función leer. Todo ello con ayuda de un contador.
     for(int i=0;i<profesion.size();i++){
         int cont=0;
         while(cont<9){
@@ -72,7 +74,7 @@ int escribir::escribir_ficheros(vector <string> profesion, vector <string> nombr
         }
     }
 
-    fs.close();
+    fs.close(); // Se cierra el fichero
 
     return 0;
 }

@@ -6,6 +6,7 @@ InterfazAnadir::InterfazAnadir(QWidget *parent) :
     ui(new Ui::InterfazAnadir)
 {
     ui->setupUi(this);
+    // Se inicializan elementos de la interfaz como no visibles
     ui->nombrelabel->setVisible(false); ui->line1->setVisible(false);
     ui->edadlabel->setVisible(false); ui->line2->setVisible(false);
     ui->dnilabel->setVisible(false); ui->line3->setVisible(false);
@@ -25,9 +26,12 @@ InterfazAnadir::~InterfazAnadir()
     delete ui;
 }
 
+// En esta opción el usuario debe introducir el tipo de trabajador a añadir en la base de datos y pulsar el botón de OK.
+// Según el tipo elegido se mostrarán diferentes casillas y etiquetas de los datos a añadir.
 
 void InterfazAnadir::on_ok_clicked()
 {
+    // Se inicializan los datos a mostrar y se limpian las casillas
     ui->nombrelabel->setVisible(true); ui->line1->setVisible(true); ui->line1->clear();
     ui->edadlabel->setVisible(true); ui->line2->setVisible(true); ui->line2->clear();
     ui->dnilabel->setVisible(true); ui->line3->setVisible(true); ui->line3->clear();
@@ -61,13 +65,19 @@ void InterfazAnadir::on_ok_clicked()
     }
 }
 
+// Una vez añadidos los datos correspondientes al tipo de trabajador, se pulsa el botón guardar para añadir los datos al
+// fichero principal.
+
 void InterfazAnadir::on_guardar_clicked()
 {
+    ui->anadido->setVisible(false);
+    ui->yaexiste->setVisible(false);
+    // Se guarda cada uno de los datos en variables
     QString tipo = ui->tipo->text(); string tipox = tipo.toStdString();
     QString nombre = ui->line1->text(); string nombrex = nombre.toStdString();
     QString edad = ui->line2->text(); int edadx = edad.toInt();
     QString dni = ui->line3->text(); string dnix = dni.toStdString();
-    int cont;
+    int cont; // Se crea un contador para comprobar si ya existe el usuario que se quiere añadir
     if (tipo=="Directivo"){
         QString sede = ui->line4->text(); string sedex = sede.toStdString();
         anadirDirectivo nuevoDirectivo = anadirDirectivo();

@@ -15,7 +15,7 @@ private:
 public:
     Persona(string, int, string);
     vector<string> mostrarPersona();
-    virtual string trabajar();
+    virtual string trabajar(); // --> POLIMORFISMO
 };
 
 #endif // PERSONA_H
